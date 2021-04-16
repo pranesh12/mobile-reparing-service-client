@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { userContext } from "../../../App";
 import tool from "../../../resources/icons/tool.png";
 
 const dummyServiceData = [
@@ -26,10 +27,11 @@ const dummyServiceData = [
 ];
 
 const Service = () => {
-  const [serviceData, setServiceData] = useState([]);
+  const { serviceData, setServiceData } = useContext(userContext);
+  // const [serviceData, setServiceData] = useState([]);
   useEffect(() => {
     setServiceData(dummyServiceData);
-  }, []);
+  }, [serviceData]);
 
   console.log(serviceData);
   return (

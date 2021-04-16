@@ -6,10 +6,12 @@ const dashboard = () => {
   return (
     <section>
       <div className="row">
-        <div className="col-md-2 col-sm-6 col-12">
+        <div className="col">
           <Sidebar />
         </div>
-        <div className="col-md-5 col-sm-12 col-12 d-flex justify-content-center"></div>
+        <div className="col">
+          <h3>hello</h3>
+        </div>
       </div>
     </section>
   );

@@ -1,9 +1,17 @@
 import React from "react";
+import Sidebar from "../../Sidebar/Sidebar";
 
 const BookingList = () => {
   return (
     <div>
-      <h3>BookingList</h3>
+      <div className="row">
+        <div className="col">
+          <Sidebar />
+        </div>
+        <div className="col">
+          <h3>Booking List</h3>
+        </div>
+      </div>
     </div>
   );
 };

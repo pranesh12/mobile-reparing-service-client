@@ -1,9 +1,17 @@
 import React from "react";
+import Sidebar from "../../Sidebar/Sidebar";
 
 const OrderList = () => {
   return (
     <div>
-      <h2>Order List</h2>
+      <div className="row">
+        <div className="col">
+          <Sidebar />
+        </div>
+        <div className="col">
+          <h3>Order List</h3>
+        </div>
+      </div>
     </div>
   );
 };

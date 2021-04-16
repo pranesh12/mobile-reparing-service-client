@@ -19,8 +19,8 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link " to="#" tabindex="-1" aria-disabled="true">
-                Disabled
+              <Link className="nav-link " to="/dashboard">
+                Dashboard
               </Link>
             </li>
           </ul>

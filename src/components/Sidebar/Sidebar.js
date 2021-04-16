@@ -6,37 +6,41 @@ const Sidebar = () => {
   return (
     <div>
       <div
-        className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4"
+        className="sidebar d-flex flex-column justify-content-between col-md-4 py-5 px-4"
         style={{ height: "100vh" }}>
         <ul className="list-unstyled">
           <div>
             <li>
-              <Link to="/allPatients" className="text-white">
-                <span>Appointments</span>
+              <Link to="/book" className="text-white">
+                <span>Book</span>
               </Link>
             </li>
             <li>
-              <Link to="/patient" className="text-white">
-                <span>Patients</span>
+              <Link to="/bookinglist" className="text-white">
+                <span>BookingList</span>
               </Link>
             </li>
             <li>
-              <Link to="/prescriptions" className="text-white">
-                <span>Prescriptions</span>
+              <Link to="/addreview" className="text-white">
+                <span>Review</span>
               </Link>
             </li>
             <li>
-              <Link to="/addDoctor" className="text-white">
-                <span>Add Doctor</span>
+              <Link to="/admin/OrderList" className="text-white">
+                <span>Order List</span>
               </Link>
             </li>
             <li>
-              <Link to="/doctor/setting" className="text-white">
-                <span>Settings</span>
+              <Link to="/admin/AddService" className="text-white">
+                <span>Add Service</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/admin/Makeadmin" className="text-white">
+                <span>Make Admin</span>
               </Link>
             </li>
           </div>
-          {/* )} */}
         </ul>
         <div>
           <Link to="/" className="text-white">
