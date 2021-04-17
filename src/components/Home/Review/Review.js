@@ -1,28 +1,15 @@
 import React, { useEffect, useState } from "react";
-const dummyReview = [
-  {
-    status: "good",
-    review:
-      "orem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natu ",
-    star: 5,
-  },
-  {
-    status: "avagrage",
-    review:
-      "orem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natu ",
-    star: 5,
-  },
-  {
-    status: "bad",
-    review:
-      "orem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natu ",
-    star: 5,
-  },
-];
 const Review = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    setReviews(dummyReview);
+    fetch("http://localhost:5000/getReviews")
+      .then((res) => res.json())
+      .then((data) => {
+        setReviews(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
   return (
     <section className="mt-3">
@@ -31,11 +18,16 @@ const Review = () => {
         <div className="row">
           {reviews.map((review) => (
             <div className="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <div className="card-title">{review.status}</div>
-                  <div className="card-text">{review.review}</div>
-                  <div className="card-text">{review.star}</div>
+              <div className="card">
+                <div className="card-body">
+                  <div className="card-title">
+                    <h5>Name: {review.name} </h5>
+                  </div>
+                  <div className="card-text">Issue:{review.issue}</div>
+                  <div className="card-text">
+                    <p> Description: {review.description}</p>
+                  </div>
+
                   <div></div>
                 </div>
               </div>

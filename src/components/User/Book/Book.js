@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
+import { userContext } from "../../../App";
+import BuyingInfo from "../../BuyingInfo/BuyingInfo";
+import ProcessPayment from "../../ProcessPayment/ProcessPayment";
 import Sidebar from "../../Sidebar/Sidebar";
 
 const Book = () => {
+  const { login } = useContext(userContext);
+  console.log(login.email, login.name);
+
   return (
     <div>
       <div className="row">
-        <div className="col">
+        <div className="col-md-4 mt-3 mb-3">
           <Sidebar />
         </div>
-        <div className="col">
-          <h3>Books</h3>
+        <div className="col-md-8 mt-5">
+          <h3>Bookings</h3>
+          <BuyingInfo />
+          <ProcessPayment />
         </div>
       </div>
     </div>
