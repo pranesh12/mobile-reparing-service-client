@@ -35,11 +35,10 @@ const AddService = () => {
   return (
     <div>
       <div className="row">
-        <div className="col-md-4">
-          <Sidebar />
-        </div>
-        <div className="col-md-8 mt-5 p-5">
-          <form onSubmit={handleSubmit}>
+        <Sidebar />
+
+        <div className="col-md-8" style={{ background: "#c1d3fe" }}>
+          <form className="mt-5" onSubmit={handleSubmit}>
             <div className="form-group">
               <input
                 onBlur={handleBlur}

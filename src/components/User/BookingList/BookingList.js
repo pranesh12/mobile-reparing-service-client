@@ -22,10 +22,9 @@ const BookingList = () => {
   return (
     <div>
       <div className="row">
-        <div className="col-4">
-          <Sidebar />
-        </div>
-        <div className="col-8 mt-5">
+        <Sidebar />
+
+        <div className="col-md-8" style={{ background: "#c1d3fe" }}>
           <h3 className="text-center">Booking List</h3>
           <div className="row mt-5">
             {BookingList.map((booklist) => (

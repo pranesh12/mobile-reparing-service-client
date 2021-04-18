@@ -17,6 +17,7 @@ const Sidebar = () => {
       })
       .catch((err) => console.log(err));
   }, [email]);
+
   return (
     <div
       className="sidebar d-flex flex-column justify-content-between col-md-4 py-5 px-4"
@@ -62,7 +63,7 @@ const Sidebar = () => {
       </ul>
       <div>
         <Link to="/" className="text-white">
-          <span>Logout</span>
+          <span>Home</span>
         </Link>
       </div>
     </div>

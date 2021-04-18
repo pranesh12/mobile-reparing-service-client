@@ -22,10 +22,9 @@ const OrderList = () => {
   return (
     <div>
       <div className="row ">
-        <div className="col-5">
-          <Sidebar />
-        </div>
-        <div className="col-7">
+        <Sidebar />
+
+        <div className="col-md-8" style={{ background: "#c1d3fe" }}>
           <table className="table">
             <thead>
               <tr>

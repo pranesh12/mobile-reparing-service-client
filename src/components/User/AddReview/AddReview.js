@@ -24,11 +24,10 @@ const AddReview = () => {
   return (
     <div>
       <div className="row">
-        <div className="col">
-          <Sidebar />
-        </div>
-        <div className="col">
-          <form onSubmit={handleSubmit}>
+        <Sidebar />
+
+        <div className="col-md-8" style={{ background: "#c1d3fe" }}>
+          <form onSubmit={handleSubmit} className="mt-5">
             <div className="form-group">
               <input
                 onBlur={handleBlur}

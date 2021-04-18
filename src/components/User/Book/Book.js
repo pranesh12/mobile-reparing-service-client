@@ -10,10 +10,9 @@ const Book = () => {
   return (
     <div>
       <div className="row">
-        <div className="col-md-4 mt-3 mb-3">
-          <Sidebar />
-        </div>
-        <div className="col-md-8 mt-1">
+        <Sidebar />
+
+        <div className="col-md-8" style={{ background: "#c1d3fe" }}>
           <h3 className="text-center">Bookings</h3>
           <BuyingInfo />
           <ProcessPayment />
