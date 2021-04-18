@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { FaBeer } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -45,18 +46,18 @@ const Footer = () => {
             </p>
           </div>
           <div className="col item social">
-            <a href="#">
+            <Link to="#">
               <FaBeer className="icon "></FaBeer>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <FaFacebookF />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <FaBeer className="icon "></FaBeer>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
               <FaFacebookF />
-            </a>
+            </Link>
           </div>
         </div>
         <p className="copyright">Company Name © 2018</p>

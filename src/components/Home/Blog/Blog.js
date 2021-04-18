@@ -32,7 +32,7 @@ const Blog = () => {
                 Placeat quibusdam tempora, natus ad laudantium beatae rerum nobis neque, architecto
                 dolore deleniti nulla accusamus incidunt cumque quo cupiditate?
               </p>
-              <a>Read More</a>
+              <p>Read More</p>
             </div>
           </div>
           <div className="col-md-6">
