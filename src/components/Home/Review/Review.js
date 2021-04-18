@@ -12,16 +12,16 @@ const Review = () => {
       });
   }, []);
   return (
-    <section className="mt-3">
+    <section className="mt-5 pt-5 pb-5" style={{ background: "#FAFAFA" }}>
       <div className="container">
-        <h1 className="text-center pb-2">Customer Reviews</h1>
+        <h3 className="text-center pb-2 mb-5">What Our Customer Said</h3>
         <div className="row">
           {reviews.map((review) => (
             <div className="col-md-4">
-              <div className="card">
+              <div className="card mt-3">
                 <div className="card-body">
                   <div className="card-title">
-                    <h5>Name: {review.name} </h5>
+                    <h6>Name: {review.name} </h6>
                   </div>
                   <div className="card-text">Issue:{review.issue}</div>
                   <div className="card-text">

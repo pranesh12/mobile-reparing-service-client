@@ -25,8 +25,8 @@ const ServiceCard = ({ service }) => {
           <h2 className="card-title text-center"> {title} </h2>
           <p className="card-text text-center">{description}</p>
           <p className="card-text text-center">Price : ${price}</p>
-          <Link to="/book">
-            <button onClick={handleBuyerData} className="btn btn-primary mx-auto">
+          <Link to="/book" className="mx-auto">
+            <button onClick={handleBuyerData} className="btn btn-primary ">
               Fix Now
             </button>
           </Link>

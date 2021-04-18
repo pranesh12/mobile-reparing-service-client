@@ -14,9 +14,9 @@ const Service = () => {
   }, []);
 
   return (
-    <section className="mt-5 " style={{ background: "#FAFAFA" }}>
+    <section className="mt-5 pt-5 pb-5" style={{ background: "#FAFAFA" }}>
       <div className="container">
-        <h1 className="text-center pt-4">Services We provided</h1>
+        <h1 className="text-center mt-4">Services We provided</h1>
         <div className="row mt-5">
           {serviceData.map((service) => (
             <div className="col-md-4">

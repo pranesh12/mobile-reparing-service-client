@@ -5,8 +5,8 @@ import warranty from "../../../resources/icons/warranty.png";
 
 const About = () => {
   return (
-    <main className="container" style={{ height: "70vh" }}>
-      <div className="row mt-5 pt-5">
+    <main className="container mb-4" style={{ height: "70vh" }}>
+      <div className="row mt-5 pt-5 ">
         <h1 className="text-center mx-auto">We are mobile phone repaier</h1>
         <p className="text-center  mt-2 mx-auto">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nostrum autem aperiam ex
