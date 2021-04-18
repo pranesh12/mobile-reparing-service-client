@@ -6,9 +6,9 @@ import { useHistory, useLocation } from "react-router";
 import { userContext } from "../../App";
 
 const Login = () => {
-  //   let history = useHistory();
-  //   let location = useLocation();
-  //   let { from } = location.state || { from: { pathname: "/" } };
+  let history = useHistory();
+  let location = useLocation();
+  let { from } = location.state || { from: { pathname: "/" } };
   if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
   }
@@ -28,7 +28,7 @@ const Login = () => {
           name: displayName,
         };
         setLogin(loginInfo);
-        // history.replace(from);
+        history.replace(from);
       })
       .catch((error) => {
         console.log(error);

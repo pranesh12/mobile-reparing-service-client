@@ -11,6 +11,7 @@ import OrderList from "./components/Admin/OrderList/OrderList";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import { createContext, useState } from "react";
 import Login from "./components/Login/Login";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 export const userContext = createContext();
 
@@ -30,30 +31,30 @@ function App() {
       <div className="App">
         <Router>
           <Switch>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard />
-            </Route>
-            <Route path="/book">
+            </PrivateRoute>
+            <PrivateRoute path="/book">
               <Book />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
-            <Route path="/addreview">
+            <PrivateRoute path="/addreview">
               <AddReview />
-            </Route>
-            <Route path="/bookinglist">
+            </PrivateRoute>
+            <PrivateRoute path="/bookinglist">
               <BookingList />
-            </Route>
-            <Route path="/admin/AddService">
+            </PrivateRoute>
+            <PrivateRoute path="/admin/AddService">
               <AddService />
-            </Route>
-            <Route path="/admin/Makeadmin">
+            </PrivateRoute>
+            <PrivateRoute path="/admin/Makeadmin">
               <MakeAdmin />
-            </Route>
-            <Route path="/admin/OrderList">
+            </PrivateRoute>
+            <PrivateRoute path="/admin/OrderList">
               <OrderList />
-            </Route>
+            </PrivateRoute>
             <Route path="/">
               <Home />
             </Route>
