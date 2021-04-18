@@ -24,6 +24,7 @@ const MakeAdmin = () => {
     <div>
       <div className="row">
         <Sidebar />
+
         <div className="col-md-8" style={{ background: "#c1d3fe" }}>
           <form onSubmit={handleSubmit} className="mt-5 pt-5">
             <div className="form-group">
