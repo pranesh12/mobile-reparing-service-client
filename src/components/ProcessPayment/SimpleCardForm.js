@@ -1,28 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { userContext } from "../../App";
 
 const SimpleCardForm = () => {
+  const { buyerData } = useContext(userContext);
+  const { login } = useContext(userContext);
+
   const [paymentError, setPaymentError] = useState(null);
   const [paymentSuccess, setPaymentSuccess] = useState(null);
   const stripe = useStripe();
   const elements = useElements();
 
   const handleSubmit = async (event) => {
-    // Block native form submission.
     event.preventDefault();
 
     if (!stripe || !elements) {
-      // Stripe.js has not loaded yet. Make sure to disable
-      // form submission until Stripe.js has loaded.
       return;
     }
 
-    // Get a reference to a mounted CardElement. Elements knows how
-    // to find your CardElement because there can only ever be one of
-    // each type of element.
     const cardElement = elements.getElement(CardElement);
 
-    // Use your card Element with other Stripe.js APIs
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
       card: cardElement,
@@ -38,6 +35,26 @@ const SimpleCardForm = () => {
       console.log("[PaymentMethod]", paymentMethod);
     }
   };
+
+  const handlePaymentSubmit = () => {
+    const paymentData = {
+      name: login.name,
+      email: login.email,
+      title: buyerData.title,
+      price: buyerData.price,
+      card: "Credit Card",
+    };
+    fetch("http://localhost:5000/addPayment", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(paymentData),
+    })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -45,7 +62,11 @@ const SimpleCardForm = () => {
           <CardElement className="form-control" />
         </div>
         <div className="form-group">
-          <button className="form-control btn btn-info" type="submit" disabled={!stripe}>
+          <button
+            onClick={handlePaymentSubmit}
+            className="form-control btn btn-info"
+            type="submit"
+            disabled={!stripe}>
             Order Now
           </button>
           {paymentError && <p className="text-danger mt-5">{paymentError}</p>}

@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { userContext } from "../../../App";
 import Sidebar from "../../Sidebar/Sidebar";
 
 const OrderList = () => {
+  const { login } = useContext(userContext);
+  let email = login.email;
+  const [orderList, setOrderList] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/AdminOrderList?email=${email}`, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setOrderList(data);
+      })
+      .catch((err) => console.log(err));
+  }, [email]);
+
   return (
     <div>
       <div className="row ">
@@ -9,7 +26,7 @@ const OrderList = () => {
           <Sidebar />
         </div>
         <div className="col-7">
-          <table class="table">
+          <table className="table">
             <thead>
               <tr>
                 <th scope="col">Name</th>
@@ -20,13 +37,17 @@ const OrderList = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>Status</td>
-              </tr>
+              {orderList.map((info) => (
+                <tr>
+                  <td>{info.name}</td>
+                  <td>{info.email}</td>
+                  <td>{info.title}</td>
+                  <td>{info.card}</td>
+                  <td>
+                    <p className="text-danger">pending</p>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

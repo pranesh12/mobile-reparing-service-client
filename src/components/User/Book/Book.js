@@ -14,8 +14,8 @@ const Book = () => {
         <div className="col-md-4 mt-3 mb-3">
           <Sidebar />
         </div>
-        <div className="col-md-8 mt-5">
-          <h3>Bookings</h3>
+        <div className="col-md-8 mt-1">
+          <h3 className="text-center">Bookings</h3>
           <BuyingInfo />
           <ProcessPayment />
         </div>
