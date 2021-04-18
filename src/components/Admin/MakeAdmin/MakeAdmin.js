@@ -14,7 +14,7 @@ const MakeAdmin = () => {
     data.append("email", info.email);
 
     axios
-      .post("http://localhost:5000/addAdmin", data)
+      .post("https://agile-hamlet-17796.herokuapp.com/addAdmin", data)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
     e.preventDefault();

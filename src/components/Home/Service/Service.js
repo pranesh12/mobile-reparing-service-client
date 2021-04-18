@@ -6,7 +6,7 @@ const Service = () => {
   const { serviceData, setServiceData } = useContext(userContext);
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://agile-hamlet-17796.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => {
         setServiceData(data);

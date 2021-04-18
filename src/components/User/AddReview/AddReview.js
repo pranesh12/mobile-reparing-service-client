@@ -16,7 +16,7 @@ const AddReview = () => {
     data.append("description", info.description);
 
     axios
-      .post("http://localhost:5000/addReview", data)
+      .post("https://agile-hamlet-17796.herokuapp.com/addReview", data)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
     e.preventDefault();

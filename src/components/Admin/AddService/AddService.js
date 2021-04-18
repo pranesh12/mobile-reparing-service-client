@@ -25,7 +25,7 @@ const AddService = () => {
     data.append("file", file);
 
     axios
-      .post("http://localhost:5000/addService", data)
+      .post("https://agile-hamlet-17796.herokuapp.com/addService", data)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
 

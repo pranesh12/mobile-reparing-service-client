@@ -8,7 +8,7 @@ const Sidebar = () => {
   const email = login.email;
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
-    fetch(`http://localhost:5000/isAdmin?email=${email}`, {
+    fetch(`https://agile-hamlet-17796.herokuapp.com/isAdmin?email=${email}`, {
       method: "GET",
     })
       .then((res) => res.json())

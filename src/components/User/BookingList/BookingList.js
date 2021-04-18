@@ -8,7 +8,7 @@ const BookingList = () => {
   const email = login.email;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/bookingList?email=${email}`, {
+    fetch(`https://agile-hamlet-17796.herokuapp.com/bookingList?email=${email}`, {
       method: "GET",
     })
       .then((res) => res.json())

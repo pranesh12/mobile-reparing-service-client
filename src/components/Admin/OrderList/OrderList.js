@@ -8,7 +8,7 @@ const OrderList = () => {
   const [orderList, setOrderList] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/AdminOrderList?email=${email}`, {
+    fetch(`https://agile-hamlet-17796.herokuapp.com/AdminOrderList?email=${email}`, {
       method: "GET",
     })
       .then((res) => res.json())
