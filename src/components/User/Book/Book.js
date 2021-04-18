@@ -6,7 +6,6 @@ import Sidebar from "../../Sidebar/Sidebar";
 
 const Book = () => {
   const { login } = useContext(userContext);
-  console.log(login.email, login.name);
 
   return (
     <div>
