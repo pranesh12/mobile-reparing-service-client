@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { userContext } from "../../App";
+import "./ServiceCard.css";
 
 const ServiceCard = ({ service }) => {
   const { title, _id, image, description, price } = service;
@@ -26,7 +27,7 @@ const ServiceCard = ({ service }) => {
           <p className="card-text text-center">{description}</p>
           <p className="card-text text-center">Price : ${price}</p>
           <Link to="/book" className="mx-auto">
-            <button onClick={handleBuyerData} className="btn btn-primary ">
+            <button onClick={handleBuyerData} className="btn btn-primary mx-auto d-block">
               Fix Now
             </button>
           </Link>

@@ -5,7 +5,7 @@ import warranty from "../../../resources/icons/warranty.png";
 
 const About = () => {
   return (
-    <main className="container mb-4" style={{ height: "70vh" }}>
+    <main className="container mb-4  ">
       <div className="row mt-5 pt-5 ">
         <h1 className="text-center mx-auto">We are mobile phone repaier</h1>
         <p className="text-center  mt-2 mx-auto">
@@ -14,7 +14,7 @@ const About = () => {
         </p>
       </div>
       <div className="row mt-5">
-        <div className="col-md-4 ">
+        <div className="col-md-4 mb-2 ">
           <img
             className="img-fluid mx-auto d-block"
             src={tool}
@@ -27,7 +27,7 @@ const About = () => {
             perferendis?
           </p>
         </div>
-        <div className="col-md-4 ">
+        <div className="col-md-4 mb-2 ">
           <img
             className="img-fluid mx-auto d-block"
             src={warranty}
@@ -40,7 +40,7 @@ const About = () => {
             perferendis?
           </p>
         </div>
-        <div className="col-md-4 ">
+        <div className="col-md-4 mb-2 ">
           <img
             className="img-fluid mx-auto d-block"
             src={signal}

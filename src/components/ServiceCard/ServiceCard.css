@@ -1,0 +1,13 @@
+button {
+  background-color: #70e000 !important;
+  color: aliceblue !important;
+  border: none !important;
+  /* border-radius: 7px !important; */
+  text-decoration: none;
+}
+a {
+  text-decoration: none !important;
+}
+button:hover {
+  background-color: #006400 !important;
+}
